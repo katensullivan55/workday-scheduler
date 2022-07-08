@@ -18,4 +18,4 @@ jQuery, Bootstrap, and moment.js
 
 ## Deployment
 
-Click the link [here](katensullivan55.github.io/workday-scheduler/)
+Click the link [here](https://katensullivan55.github.io/workday-scheduler/)
