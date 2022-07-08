@@ -1,19 +1,19 @@
-# Work Day Sceduler
+# Work Day Scheduler
 
 ## Table of Contents
 
- - [Description](###Description)
- - [Technologies](###Technologies)
- - [Deployed URL](###DeployedURL)
+- [Work Day Scheduler](#work-day-scheduler)
+  - [Table of Contents](#table-of-contents)
+  - [Description](#description)
+  - [Technologies](#technologies)
+  - [Deployment](#deployment)
 
-### Description
+## Description
 
-
-
-### Technologies
+## Technologies
 
 jQuery, Bootstrap, and moment.js
 
-### Deployed URL
+## Deployment
 
 Click the link [here](katensullivan55.github.io/work-day-scheduler/)
