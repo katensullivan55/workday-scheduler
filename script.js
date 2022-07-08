@@ -9,14 +9,9 @@ window.addEventListener('load', displayDate)
 
 // function that saves tasks
 $("button").on("click", function(){
-    var task = $(this).siblings("textarea").val()
-    console.log(task)
-
-    var taskTime = $(this).siblings(".time-block").attr("id")
-    console.log(taskTime)
-
-    localStorage.setItem(taskTime, task)
-
+    var toDo = $(this).siblings("textarea").val()
+    var dueTime = $(this).siblings(".time-block").attr("id")
+    localStorage.setItem(dueTime, toDo)
     window.alert("Your Task is SAVED to your Scheduler!")
 })
 
@@ -30,3 +25,19 @@ $("#two").siblings("textarea").val(localStorage.getItem("two"))
 $("#three").siblings("textarea").val(localStorage.getItem("three"))
 $("#four").siblings("textarea").val(localStorage.getItem("four"))
 $("#five").siblings("textarea").val(localStorage.getItem("five"))
+
+// variable and function to check time with moment and color code blocks
+var currentHour = moment().hour();
+
+$(".description").each(function(){
+    hourCheck = $(this).siblings(".time-block").attr("id")
+        if(hourCheck == currentHour){
+            $(this).css("background-color","red")
+        }
+        else if(hourCheck < currentHour){
+            $(this).css("background-color","lightgray")
+        }
+        else if(hourCheck > currentHour){
+            $(this).css("background-color","green")
+        }
+});
