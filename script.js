@@ -32,12 +32,18 @@ var currentHour = moment().hour();
 $(".description").each(function(){
     hourCheck = $(this).siblings(".time-block").attr("id")
         if(hourCheck == currentHour){
-            $(this).css("background-color","red")
+            $(this).addClass('present')
+            $(this).removeClass('past')
+            $(this).removeClass('future')
         }
         else if(hourCheck < currentHour){
-            $(this).css("background-color","lightgray")
+            $(this).addClass('past')
+            $(this).removeClass('present')
+            $(this).removeClass('future')
         }
         else if(hourCheck > currentHour){
-            $(this).css("background-color","green")
+            $(this).addClass('future')
+            $(this).removeClass('past')
+            $(this).removeClass('present')
         }
 });
